@@ -1,0 +1,43 @@
+<main class="page">
+  <div class="page-heading">
+    <div>
+      <p class="eyebrow">League directory</p>
+      <h1>NFL Teams</h1>
+    </div>
+    <p>{{ teamData.teams().length }} teams</p>
+  </div>
+
+  <div class="table-wrap">
+    <table>
+      <caption>All NFL teams and their divisions, home cities, and favorites</caption>
+      <thead>
+        <tr>
+          <th scope="col">Name</th>
+          <th scope="col">Division</th>
+          <th scope="col">Home City</th>
+          <th scope="col">Favorite</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (team of teamData.teams(); track team.id) {
+          <tr>
+            <th scope="row">
+              <a [routerLink]="['/teams', team.id]">{{ team.name }}</a>
+            </th>
+            <td>{{ team.division }}</td>
+            <td>{{ team.homeCity }}</td>
+            <td>
+              <input
+                type="checkbox"
+                [id]="'favorite-' + team.id"
+                [checked]="team.favorite"
+                [attr.aria-label]="'Mark ' + team.name + ' as a favorite'"
+                (change)="setFavorite(team.id, $event)"
+              />
+            </td>
+          </tr>
+        }
+      </tbody>
+    </table>
+  </div>
+</main>

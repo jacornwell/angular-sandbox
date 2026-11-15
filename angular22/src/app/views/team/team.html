@@ -1,0 +1,44 @@
+<main class="page">
+  @if (team(); as currentTeam) {
+    <a class="back-link" routerLink="/teams">Back to teams</a>
+    <section class="form-card" aria-labelledby="team-heading">
+      <p class="eyebrow">Team details</p>
+      <h1 id="team-heading">{{ currentTeam.name }}</h1>
+      <form [formGroup]="form" (ngSubmit)="save()">
+        <label for="name">Name</label>
+        <input id="name" type="text" formControlName="name" required />
+        @if (form.controls.name.touched && form.controls.name.invalid) {
+          <p class="error">Enter a team name.</p>
+        }
+
+        <label for="division">Division</label>
+        <input id="division" type="text" formControlName="division" required />
+        @if (form.controls.division.touched && form.controls.division.invalid) {
+          <p class="error">Enter a division.</p>
+        }
+
+        <label for="homeCity">Home City</label>
+        <input id="homeCity" type="text" formControlName="homeCity" required />
+        @if (form.controls.homeCity.touched && form.controls.homeCity.invalid) {
+          <p class="error">Enter a home city.</p>
+        }
+
+        <label class="favorite-label">
+          <input type="checkbox" formControlName="favorite" />
+          Favorite team
+        </label>
+
+        <button type="submit">Save changes</button>
+        @if (saved()) {
+          <p class="success" role="status">Team details saved.</p>
+        }
+      </form>
+    </section>
+  } @else {
+    <section class="form-card">
+      <h1>Team not found</h1>
+      <p>The team you requested is not in the directory.</p>
+      <a routerLink="/teams">Return to NFL Teams</a>
+    </section>
+  }
+</main>
