@@ -51,3 +51,11 @@ npm install -D typescript@5.9.3
 ```
 
 > 59 vulnerabilities (2 low, 38 moderate, 15 high, 4 critical)
+
+## Stage 4
+
+Ran `npm outdated` to compare the current version of the NPM packages against the version that is safe to update to.
+
+Then I updated the version reflected in `package.json` to the version reflected in the current version from the output.
+
+> This stage did not make any improvements to the vulnerabilities stats.
