@@ -59,3 +59,13 @@ Ran `npm outdated` to compare the current version of the NPM packages against th
 Then I updated the version reflected in `package.json` to the version reflected in the current version from the output.
 
 > This stage did not make any improvements to the vulnerabilities stats.
+
+## Stage 5
+
+Only audit primary dependencies. 
+
+```
+npm audit --omit=dev
+```
+
+> 37 vulnerabilities (28 moderate, 8 high, 1 critical)

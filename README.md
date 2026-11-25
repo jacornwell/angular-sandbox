@@ -18,10 +18,12 @@ Repo to practice angular development.
 
 ### 3. Updating & Auditing
 * **`npm outdated`** — Checks for newer versions of your installed packages.
+* **`npm outdated --json`** - Formats the output as JSON.
 * **`npm update`** — Updates packages to the latest versions allowed by your `package.json` semver ranges.
 * **`npm install <package>@latest`** — Forces an update to the absolute latest version, ignoring semver limits.
 * **`npm audit`** — Scans your dependencies for known security vulnerabilities.
 * **`npm audit fix`** — Automatically installs compatible updates to resolve security issues.
+* **`npm audit --omit=dev`** - Omit the dev-dependencies from the audit results.
 
 ### 4. Running Scripts & Tools
 * **`npm run <script-name>`** — Executes a custom script defined in the `"scripts"` section of `package.json` (e.g., `npm run dev` or `npm run build`).
