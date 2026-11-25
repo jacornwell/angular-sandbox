@@ -88,6 +88,6 @@
     "sqlint": "^1.2.1",
     "ts-node": "^10.9.2",
     "tsqllint": "^1.15.3",
-    "typescript": "^5.8.3"
+    "typescript": "^5.9.3"
   }
 }

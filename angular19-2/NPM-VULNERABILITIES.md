@@ -42,3 +42,12 @@ npm audit fix
 
 > 59 vulnerabilities (2 low, 38 moderate, 15 high, 4 critical)
 
+## Stage 3
+
+Update the `typescript` dev-dependency from version 5.8.3 to 5.9.3.
+
+```
+npm install -D typescript@5.9.3
+```
+
+> 59 vulnerabilities (2 low, 38 moderate, 15 high, 4 critical)
