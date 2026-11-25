@@ -3,7 +3,6 @@
   "version": "0.0.0",
   "license": "UNLICENSED",
   "scripts": {
-    "install": "npm ci --legacy-peer-deps",
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",

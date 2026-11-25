@@ -2,6 +2,12 @@
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.3.
 
+## Install Node Dependencies
+
+```
+npm ci --legacy-peer-deps
+```
+
 ## Development server
 
 To start a local development server, run:
