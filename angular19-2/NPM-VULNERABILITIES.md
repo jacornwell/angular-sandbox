@@ -30,3 +30,15 @@ npm update
 ```
 
 > 59 vulnerabilities (2 low, 38 moderate, 15 high, 4 critical)
+
+
+## Stage 2
+
+The result of this stage resulted in the same stats, but updates were made to package-lock.json.
+
+```
+npm audit fix
+```
+
+> 59 vulnerabilities (2 low, 38 moderate, 15 high, 4 critical)
+
