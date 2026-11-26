@@ -1,0 +1,32 @@
+<main class="page">
+  <div class="page-heading">
+    <div>
+      <p class="eyebrow">DataTable Examples</p>
+      <h1>Basic DataTable Example</h1>
+    </div>
+  </div>
+
+  <div class="table-wrap">
+    <table #myTable class="display">
+      <caption>Basic DataTable Example</caption>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Position</th>
+          <th>Office</th>
+          <th>Salary</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (user of users; track user.name) {
+        <tr>
+          <td>{{ user.name }}</td>
+          <td>{{ user.position }}</td>
+          <td>{{ user.office }}</td>
+          <td>{{ user.salary }}</td>
+        </tr>
+        }
+      </tbody>
+    </table>
+  </div>
+</main>
